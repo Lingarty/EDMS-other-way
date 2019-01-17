@@ -18,14 +18,14 @@ namespace GeneratorDocx
 
         // пока что считаем, что всегда currentTemplateName == "Template1"
         // Добавляем шаблон
-        Template1 currentTemplate = new Template1();
         
         // Создаёт в папке Temp шаблон.docx
-        public void Create()
+        public void Create(string name)
         {
-            new Template1().CreatePackage(@"C:\Temp\Output.docx");
-            new Template1().CreatePackage(@"C:\Temp\Output.dot");
-            new Template1().CreatePackage(@"C:\Temp\Output.rtf");
+            var currentTemplate = TemplateBuilder.BuildTemplate(name);
+            currentTemplate.CreatePackage(@"C:\Temp\Output.docx");
+            currentTemplate.CreatePackage(@"C:\Temp\Output.dot");
+            currentTemplate.CreatePackage(@"C:\Temp\Output.rtf");
         }
 
     }

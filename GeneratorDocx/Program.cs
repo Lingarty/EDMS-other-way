@@ -9,10 +9,11 @@ namespace GeneratorDocx
     {
         static void Main(string[] args)
         {
+            TemplateBuilder.RegisterTemplate("template1", new Template1Adapter());
             string[] data = null;
             string t1 = null;
             Generator gen = new Generator(t1, data);
-            gen.Create();
+            gen.Create("template1");
         }
     }
 }
