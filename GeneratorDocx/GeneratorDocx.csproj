@@ -41,10 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Generator.cs" />
+    <Compile Include="ITemplate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="T1Markers.cs" />
     <Compile Include="Template1.cs" />
+    <Compile Include="Template1Adapter.cs" />
+    <Compile Include="TemplateBuilder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
